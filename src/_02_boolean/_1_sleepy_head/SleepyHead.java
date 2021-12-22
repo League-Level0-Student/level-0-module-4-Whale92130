@@ -71,14 +71,27 @@ public class SleepyHead {
 		
 		/***********************   RED SQUARE  ********************/
 		
-		boolean isRed;
+		boolean isRed = false;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
+		String color = JOptionPane.showInputDialog(null, "What color should I draw with?");
+		String shape = JOptionPane.showInputDialog(null, "What shape should I draw?");
 		
-		
-		boolean isSquare;		
+		boolean isSquare = false;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
+		if (color.equals("red")) {
+			isRed = true;
+		}
 		
+		if (shape.equals("square")) {
+			isSquare = true;
+		}
 		
+		if (isRed && isSquare == true) {
+			drawRedSquare();
+		}
+		else if (isRed && isSquare == false) {
+			JOptionPane.showMessageDialog(null, "I don't know how to draw that shape.");
+		}
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how
 		// Use an if statement to ONLY draw a red square when it has been requested (use the method below)
@@ -90,6 +103,12 @@ public class SleepyHead {
 	
 	static void drawRedSquare() {
 		Robot rob = new Robot();
-		// Complete the rest of this method
+		rob.setSpeed(500);
+		rob.penDown();
+		rob.setPenColor(255, 0, 0);
+		for(int count = 0; count < 5; count++) {
+		rob.move(300);
+		rob.turn(90);
+		}
 	}	
 }
