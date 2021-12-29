@@ -9,21 +9,26 @@ boolean canPlaySounds = true;
 void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
-  PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
-  size(600, 400); 
+  PImage waldo = loadImage("WheresWaldo.jpg"); // Change this to match your file name.
+  size(1200, 800); 
   // Resize your waldo picture to the same size as the sketch
-  
+    waldo = loadImage("WheresWaldo.jpg");
+  waldo.resize(1200,800);
   // Make the waldo image your sketch background
-
+  background(waldo);
 }
 
 void draw() {
 
       // If the user presses the mouse .......
-  
+//    if (mousePressed == true) {
+ //     println("X: " + mouseX + " Y: " + mouseY);
+//}
           // Use this print statement to help you find the location of Waldo to use in the code below
           // println("X: " + mouseX + " Y: " + mouseY); 
-    
+    if (mouseX <= 855 && mouseX >= 793 && mouseY <= 379 && mouseY >= 492) {
+      println("Waldo found!");
+    }
           // Check if the location of the mouse is anywhere on the image of Waldo.
           // If it is, print “Waldo found!”  Use the text() command to write it on the sketch.
           
