@@ -26,8 +26,9 @@ void draw() {
 //}
           // Use this print statement to help you find the location of Waldo to use in the code below
           // println("X: " + mouseX + " Y: " + mouseY); 
-    if (mouseX <= 855 && mouseX >= 793 && mouseY <= 379 && mouseY >= 492) {
-      println("Waldo found!");
+          println("X: " + mouseX + " Y: " + mouseY); 
+    if (mouseX <= 855 && mouseX >= 793 && mouseY >= 379 && mouseY <= 492) {
+     
     }
           // Check if the location of the mouse is anywhere on the image of Waldo.
           // If it is, print “Waldo found!”  Use the text() command to write it on the sketch.

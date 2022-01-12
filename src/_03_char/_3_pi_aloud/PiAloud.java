@@ -11,11 +11,12 @@ public class PiAloud {
 	 * *****************/
 	boolean canPlaySounds = true;
 	
-	
+
+		public static void main(String[] args) { 
 	// 1. Make a main method and make sure your program can run
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
-
+		String Pii = "314159265358979323846";
 	// 3. Print out 3 digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
 	// Check the console shows 3.1
 
@@ -33,7 +34,7 @@ public class PiAloud {
 	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
 	
 	
-	
+		}
 	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
 	static void speak(char characterToSpeak) {
@@ -69,5 +70,5 @@ public class PiAloud {
 	}
 
 }
-
+		
 
